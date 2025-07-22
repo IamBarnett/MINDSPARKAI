@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpark AI - Diagramas de Arquitectura</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .diagrams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+        
+        .diagram-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .diagram-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        }
+        
+        .diagram-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .diagram-description {
+            color: #6c757d;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .diagram-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .diagram-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .features h4 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .features li {
+            padding: 5px 0;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .diagrams-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 MindSpark AI</h1>
+            <p>Diagramas de Arquitectura Interactivos</p>
+        </div>
+        
+        <div class="diagrams-grid">
+            <!-- Diagrama Completo -->
+            <div class="diagram-card">
+                <div class="diagram-title">
+                    🏗️ Diagrama de Arquitectura Completo
+                </div>
+                <div class="diagram-description">
+                    Vista general de la arquitectura por capas con todos los componentes, tecnologías y patrones utilizados en MindSpark AI.
+                </div>
+                <button class="diagram-btn" onclick="openArchitectureDiagram()">
+                    Ver Diagrama Completo
+                </button>
+                <div class="features">
+                    <h4>Características:</h4>
+                    <ul>
+                        <li>Arquitectura MVVM con Clean Architecture</li>
+                        <li>4 capas bien definidas</li>
+                        <li>Stack tecnológico completo</li>
+                        <li>Componentes interactivos</li>
+                        <li>Integración multi-LLM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Diagrama Técnico -->
+            <div class="diagram-card">
+                <div class="diagram-title">
+                    ⚙️ Diagrama Técnico - Flowchart
+                </div>
+                <div class="diagram-description">
+                    Diagrama técnico estilo flowchart que muestra el flujo de datos, conexiones específicas entre componentes y clases del sistema.
+                </div>
+                <button class="diagram-btn" onclick="openTechnicalDiagram()">
+                    Ver Diagrama Técnico
+                </button>
+                <div class="features">
+                    <h4>Características:</h4>
+                    <ul>
+                        <li>Estilo flowchart profesional</li>
+                        <li>Componentes específicos</li>
+                        <li>Flujo de datos visual</li>
+                        <li>Conexiones entre capas</li>
+                        <li>Información detallada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openArchitectureDiagram() {
+            window.open('architecture.html', '_blank');
+        }
+
+        function openTechnicalDiagram() {
+            window.open('technical.html', '_blank');
+        }
+    </script>
+</body>
+</html>
